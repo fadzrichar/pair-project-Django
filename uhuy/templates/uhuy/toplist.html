@@ -1,0 +1,24 @@
+{% extends 'uhuy/base.html' %}
+
+{% block title %}
+Toplist
+{% endblock %}
+
+{% block content %}
+<section class= "home-section">
+    <div class="container content align-items-center">
+        <div class="row content-row">
+            {% for place in destinations %}
+            <div class="col-3">
+                <a href="{%url 'uhuy:details' place.id%}">
+                    <h6>★ {{place.dest_rating}}</h6>
+                    <h6><strong>{{place.dest_country}}</strong></h6>
+                    <h5>{{place.dest_name}}</h5>
+                    <h5>From ${{place.dest_price}}/night</h5>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock  %}

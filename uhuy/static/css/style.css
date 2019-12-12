@@ -1,0 +1,111 @@
+body {
+    opacity: 1;
+    padding-top: 100px;
+    text-align: justify;
+}
+/* HEADER */
+header {
+    padding: 11px 0;
+    border-bottom: 1px solid #ececec;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+header .airbnb-icon img {
+    width: 5%;
+    margin: 2% 3%;
+}
+header .kolom-search {
+    display: initial;
+    width: 88%;
+    height: 50px;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+}
+header .kolom-search:hover {
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+}
+header a {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #495057;
+    text-decoration: none;
+}
+.header-nav {
+    display: table;
+    margin-left: auto;
+}
+.header-nav__list {
+    margin: 0;
+}
+.header-nav__list li {
+    display: inline-block;
+    vertical-align: middle;
+}
+.header-nav__list a {
+    text-decoration: none;
+    text-align: left;
+    font-family: 'Muli';
+    margin: 0 10px;
+    display: block;
+}
+.header-nav__list .nav-string:hover {
+    border-bottom: solid 2px;
+}
+.header-nav__list img {
+    border-radius: 50%;
+}
+.header-nav__list img:hover {
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* HOME */
+.home-section h3 {
+    font-family: 'Muli';
+    font-weight: bold;
+    columns: rgb(72,72,72);
+}
+
+
+/* FOOTER */
+
+.footer{
+    margin-top: 30px;
+    border-bottom: 1px solid lightblue;
+}
+.footer-one {
+    font-family: 'Muli' !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    line-height: 1.28571em !important;
+}
+
+.footer-one a{
+    color: lightslategrey;
+    text-decoration: none;
+}
+
+.footer-two{
+    margin-top: 10px;
+    padding-left: 13px;
+}
+
+.footer-two img{
+    margin-right: 10px;
+}
+
+.footer-two span{
+    font-size: 10px;
+    justify-content: center;
+    color: lightslategrey;
+}

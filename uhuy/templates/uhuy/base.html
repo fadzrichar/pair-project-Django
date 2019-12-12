@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <title>{% block title %}{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style.css' %}" />
+    </head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-6" style="padding-left: 0.5%;">
+                    <form action="{% url 'uhuy:toplist' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <a href="{%url 'uhuy:home'%}" class="airbnb-icon">
+                                <img src="{% static '/img/airbnb-icon.png' %}" alt="">
+                            </a>
+                            <input class="form-control kolom-search" type="text" name="search" id="search" placeholder="Try 'Malang'">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <div class="header-nav">
+                        <ul class="header-nav__list list-unstyled">
+                            <li>
+                                <a class="nav-string" href="{%url 'uhuy:home'%}">Become a host</a>
+                            </li>
+                            <li>
+                                <a class="nav-string" href="">Saved</a>
+                            </li>
+                            <li>
+                                <a class="nav-string" href="">Trips</a>
+                            </li>
+                            <li>
+                                <a class="nav-string" href="">Messages</a>
+                            </li>
+                            <li>
+                                <a class="nav-string" href="">Help</a>
+                            </li>
+                            <li>
+                                <a href="{%url 'uhuy:profile'%}" class="profile-pic">
+                                    <!-- <img src="{{user.pic}}" alt=""> -->
+                                    <img src="https://a0.muscache.com/defaults/user_pic-50x50.png?v=3" width="28px" height="28px">   
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+   
+    {% block content %}
+    {% endblock  %}
+ 
+
+    <footer>
+        <div class="container footer">
+            <div class="row footer-one">
+                <div class="col-3">
+                    <ul class="footer-col-one list-unstyled">
+                        <li><strong>Airbnb</strong></li></br>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Policies</a></li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Diversity & Belonging</a></li>
+                        <li><a href="">Accessibilty</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="footer-col-two list-unstyled">
+                        <li><strong>Discover</strong></li></br>
+                        <li><a href="">Trust & Safety</a></li>
+                        <li><a href="">Invite Friends</a></li>
+                        <li><a href="">Gift Cards</a></li>
+                        <li><a href="">Airbnb Citizen</a></li>
+                        <li><a href="">Business Travel</a></li>
+                        <li><a href="">Things To Do</a></li>
+                        <li><a href="">Airbnbmag</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="footer-col-third list-unstyled">
+                        <li><strong>Hosting</strong></li></br>
+                        <li><a href="">Why Host</a></li>
+                        <li><a href="">Refer Hosts</a></li>
+                        <li><a href="">Hospitality</a></li>
+                        <li><a href="">Responsible Hosting</a></li>
+                        <li><a href="">Community Center</a></li>
+                        <li><a href="">Host an Experience</a></li>
+                        <li><a href="">Open Homes/a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="footer-col-forth list-unstyled">
+                        <li> </li>
+                        <li>
+                            <img src="https://www.freepngimg.com/thumb/social_media/74031-instagram-icons-media-youtube-computer-facebook-social.png" width="70px">
+                        </li>
+                        <li><a href="">Terms</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row footer-two align-items-center">
+                <img src="{% static '/img/airbnb-icon.png' %}" width="15px" height="15px">
+                <span>Copyright &copy; 2019 Airbnb, Inc. All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

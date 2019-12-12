@@ -1,0 +1,28 @@
+{% extends 'uhuy/base.html' %}
+
+{%block title%}
+Home
+{%endblock%}
+
+{% block content %}
+<section class= "home-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <h3>What can we help you find, {{user.name}}?</h3>
+        </div>
+        <div class="row align-items-center">
+            {%for place in destinations%}
+            <div class="col-3">
+                <a href="{%url 'uhuy:details' place.id%}">
+                    <h6><strong>{{place.dest_country}}</strong></h6>
+                    <h5>{{place.dest_short_desc}}</h5>
+                    <h5>From ${{place.dest_price}}/person • 2 days</h5>
+                    <h6>★ {{place.dest_rating}}</h6>
+                </a>
+            </div>
+            {%endfor%}
+            <a href="{%url 'uhuy:toplist'%}" class="show-all">Show all adventures ></a>
+        </div>
+    </div>
+</section>
+{% endblock  %}
