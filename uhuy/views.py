@@ -9,7 +9,8 @@ from django.db.models import Q
 
 def home(request):
     destinations = Destination.objects.all().order_by("-dest_rating")
-    fields = {"destinations": destinations[:4:], "user": User.objects.get(pk=1)}
+    total = len(destinations)
+    fields = {"destinations": destinations[:4:], "user": User.objects.get(pk=1), "total":total}
     return render(request, 'uhuy/home.html', fields)
 
 def details(request, place_id):
