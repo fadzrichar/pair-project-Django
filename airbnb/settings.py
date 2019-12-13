@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['uhuyuhuy.pythonanywhere.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     'uhuy',
+    'ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -125,3 +126,4 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CKEDITOR_UPLOAD_PATH = "uploads/"
