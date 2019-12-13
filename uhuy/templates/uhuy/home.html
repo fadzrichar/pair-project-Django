@@ -8,21 +8,69 @@ Home
 <section class= "home-section">
     <div class="container">
         <div class="row align-items-center">
-            <h3>What can we help you find, {{user.name}}?</h3>
+            <span class="section-title">What can we help you find, {{user.first_name}}?</span>
         </div>
         <div class="row align-items-center">
+            <div class="col-4">
+                <div class="sty-exp-adv row align-items-center">
+                    <div class="col-5 stays-pic">
+                        <img style="width: 100%;" src="https://a0.muscache.com/im/pictures/8b7519ec-2c82-4c09-8233-fd4d2715bbf9.jpg?aki_policy=x_large" alt="">
+                    </div>
+                    <div class="col-7">
+                        <span>Stays</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="sty-exp-adv row align-items-center">
+                    <div class="col-5 stays-pic">
+                        <img style="width: 100%;" src="https://a0.muscache.com/im/pictures/a77ee672-e790-4362-8cc5-52bec1371ece.jpg?aki_policy=x_large" alt="">
+                    </div>
+                    <div class="col-7">
+                        <span>Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="sty-exp-adv row align-items-center">
+                    <div class="col-5 stays-pic">
+                        <img style="width: 100%;" src="https://a0.muscache.com/im/pictures/38f2bfd6-1f4d-46d7-babf-61657deef302.jpg?aki_policy=x_large" alt="">
+                    </div>
+                    <div class="col-7">
+                        <span>Adventures</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar cooking-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6" style="padding: 0;">
+                    <h6>INTRODUCING</h6>
+                    <img style="width: 100%;" src="https://a0.muscache.com/pictures/6b277da4-da99-40dd-ba3f-f4c4169ac478.jpg" alt="">
+                    <button type="button" class="btn btn-light">Learn more</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding: 0;">
+        <span class="section-title">Top-rated experiences</span>
+        <p>Book activities led by local host on your next trip</p>
+        <div class="row content-row">
             {%for place in destinations%}
             <div class="col-3">
-                <a href="{%url 'uhuy:details' place.id%}">
-                    <h6><strong>{{place.dest_country}}</strong></h6>
-                    <h5>{{place.dest_short_desc}}</h5>
-                    <h5>From ${{place.dest_price}}/person • 2 days</h5>
-                    <h6>★ {{place.dest_rating}}</h6>
+                <a class="top-exp" href="{%url 'uhuy:details' place.id%}">
+                    <img style="width: 100%;" src="{{place.dest_image_path}}" alt="" height="170px">
+                    <h6>{{place.dest_country}}</h6>
+                    <p>{{place.dest_name|title}}</p>
+                    <span>From ${{place.dest_price}}/person • 2 days</span><br>
+                    <p>★ {{place.dest_rating}}</p>
                 </a>
             </div>
             {%endfor%}
-            <a href="{%url 'uhuy:toplist'%}" class="show-all">Show all adventures ></a>
         </div>
+        <a href="{%url 'uhuy:toplist'%}" class="show-all">Show all experiences ></a>
     </div>
 </section>
 {% endblock  %}

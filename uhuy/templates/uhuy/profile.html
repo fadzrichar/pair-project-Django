@@ -1,0 +1,42 @@
+{% extends 'uhuy/base.html' %}
+
+{%block title%}
+Profile
+{%endblock%}
+
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-4" style="text-align: center;">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <img style="width: 34%; border-radius: 50%;" src="{%if user.picture.url == none or user.picture.url == ''%}
+                            https://a0.muscache.com/defaults/user_pic-50x50.png?v=3
+                            {%else%}
+                            {{user.picture.url}}
+                            {%endif%}">
+                            <form action="{% url 'uhuy:change_profile_pic'%}" method="POST">
+                                {% csrf_token %}
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                    <label for="inputGroupFile01">Update your photo</label>
+                                    <!-- <button type="submit">Post</button> -->
+                                </div>
+                            </form>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <p>{{user.first_name}} provided</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-7">
+                <h1>Hi, I'm {{user.first_name}}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock  %}

@@ -22,7 +22,8 @@ header .kolom-search {
     display: initial;
     width: 88%;
     height: 50px;
-    font-weight: bold;
+    font-weight: 700;
+    color: gray;
     -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
@@ -58,6 +59,7 @@ header a {
     display: block;
 }
 .header-nav__list .nav-string:hover {
+    text-decoration: none;
     border-bottom: solid 2px;
 }
 .header-nav__list img {
@@ -70,15 +72,84 @@ header a {
 }
 
 /* HOME */
-.home-section h3 {
+.home-section .section-title {
     font-family: 'Muli';
     font-weight: bold;
-    columns: rgb(72,72,72);
+    font-size: 140%;
+    color: rgb(72,72,72);
+    margin-bottom: 2%;
+}
+.home-section .stays-pic {
+    padding-left: 0;
+}
+.home-section .sty-exp-adv {
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.15);
+}
+.home-section .cooking-fluid {
+    background-image: url(https://a0.muscache.com/im/pictures/cf069ce3-f88f-4aaf-b37d-4855d85440ac.jpg);
+    background-size: 100%;
+    margin: 5% 0;
+}
+.home-section .cooking-fluid img {
+    margin-bottom: 15%;
+}
+.home-section .cooking-fluid h6 {
+    color: white;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+.home-section .cooking-fluid .btn {
+    padding: 3% 8%;
+    margin-bottom: 20%;
+}
+.home-section .top-exp {
+    color: rgb(72,72,72);
+    font-size: 16px;
+}
+.home-section .top-exp img {
+    border-radius: 5%;
+}
+.home-section .top-exp p {
+    margin-bottom: 2%;
+}
+.home-section .top-exp h6 {
+    margin: 4% 0;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.home-section .content-row {
+    margin-bottom: 3%;
+}
+.home-section .content-row a {
+    text-decoration: none;
 }
 
+/* DETAILS */
+
+.details-content-image img{
+    border-radius: 3%;
+    margin-bottom: 30px;
+}
+.details-content-info li{
+    display: inline-block;
+}
+
+.details-content-value{
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.li-padding{
+    padding-left: 30px;
+}
 
 /* FOOTER */
-
 .footer{
     margin-top: 30px;
     border-bottom: 1px solid lightblue;
@@ -98,6 +169,7 @@ header a {
 .footer-two{
     margin-top: 10px;
     padding-left: 13px;
+    margin-bottom: 20px;
 }
 
 .footer-two img{

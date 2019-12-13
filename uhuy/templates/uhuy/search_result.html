@@ -6,9 +6,11 @@ Toplist
 
 {% block content %}
 <section class= "home-section">
-    <div class="container content align-items-center">   
-        <span class="section-title">Top-rated places to stay</span>
-        <p>Explore some of the best-reviewed stays in the world</p>
+    <div class="container content align-items-center">
+        <p class="section-title">Searching for '{{keyword}}'</p>
+        {%if destinations|length == 0%}
+        <p>No result match '{{keyword}}'</p>
+        {%else%}
         <div class="row">
             {%for place in destinations%}
             <div class="col-3 content-row">
@@ -22,6 +24,7 @@ Toplist
             </div>
             {%endfor%}
         </div>
+        {%endif%}
     </div>
 </section>
 {% endblock  %}
